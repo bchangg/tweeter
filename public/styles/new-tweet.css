@@ -1,0 +1,30 @@
+.new-tweet {
+  position: relative;
+  margin: 0 auto 2em auto;
+  font-family: 'Bungee', 'sans-serif';
+  width: 70%;
+}
+
+.new-tweet h2 {
+  font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+.new-tweet textarea {
+  position: relative;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  font-weight: 700;
+  background-color: transparent;
+  width: 100%;
+  border-width: 0px 0px 3px 0px;
+}
+
+.new-tweet input {
+  color: white;
+  background-color: #4353A0;
+  border: none;
+  float: left;
+}
+
+.new-tweet span {
+  float: right;
+}
