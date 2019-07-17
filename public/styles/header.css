@@ -1,4 +1,4 @@
-header {
+.main-header {
   position: absolute;
   top: 120px;
   width: 100%;
@@ -7,7 +7,7 @@ header {
   background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
 }
 
-header img {
+.main-header img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -16,11 +16,11 @@ header img {
   margin: auto;
 }
 
-header h2 {
+.main-header h2 {
   position: relative;
   text-align: center;
   font-weight: 300;
-  bottom: -7.5em;
+  bottom: -16.5rem;
 }
 
 header h2 span {
