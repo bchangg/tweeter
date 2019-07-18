@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,7 +14,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -27,4 +27,33 @@ main {
   top: 520px;
   width: 90%;
   margin: 0 auto;
+}
+
+.c_error {
+  font-family: "Source Sans Pro", "sans-serif";
+  text-align: left;
+  color: red;
+  border: 1px solid red;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 70%;
+  background-color: rgb(254, 9, 0, 0.2);
+  box-shadow: 1px 1px 3px black;
+  border-radius: 3px;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: white;
+  color: white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  display: none;
+}
+
+.main-header:visible .go-to-top {
+  display: block;
 }

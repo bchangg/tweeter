@@ -10,8 +10,15 @@
    z-index: 2;
  }
  
- #newTweetButton {
+nav div {
    font-family: 'Source Sans Pro', 'sans-serif';
    font-weight: 400;
    float: right;
+   text-align: center;
  }
+ 
+#newTweetButton:hover {
+  position: relative;
+  top: -0.5rem;
+  color: black;
+}

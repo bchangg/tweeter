@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name="viewport" content="width=device-width">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -31,24 +32,27 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <span id="newTweetButton"><strong>Write</strong> a new tweet</span>
+    <div id="newTweetButton">
+      <span><strong>Write</strong> a new tweet</span>
+      <br>
+      <span>&#8964;</span>
+    </div>
   </nav>
   <header class="main-header">
     <img src="/images/profile-hex.png">
     <br>
-    <div class="">
-      <h2><span>Brian</span> Chang</h2>
-    </div>
+    <h2>These aren't the <span>droids</span> you're looking for</h2>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <img class="go-to-top" src="https://image.flaticon.com/icons/png/512/20/20427.png" alt="">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
+      <form id="new-tweet-form">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
-        <span>140</span>
       </form>
+      <span>140</span>
     </section>
     <section class="tweet-container">
     </section>

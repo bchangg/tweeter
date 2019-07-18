@@ -1,28 +1,10 @@
-const data = [{
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 $(document).ready(function() {
+  const safeText = function(someText) {
+    let $div = $("<div/>");
+    $div.append(document.createTextNode(someText));
+    return $div.innerHTML;
+  }
+
   const createTweetElement = function(tweet) {
     let tweetArticle = `
     <article><header>
@@ -36,7 +18,7 @@ $(document).ready(function() {
     ${tweet.user.handle}
     </span></header>
     <div>
-    ${tweet.content.text}
+    ${$('<div>').text(tweet.content.text).html()}
     </div>
     <footer>
     <div class="time-tweeted">
@@ -53,8 +35,59 @@ $(document).ready(function() {
   const renderTweets = function(data) {
     data.forEach((tweet) => {
       let $tweet = createTweetElement(tweet);
-      $('.tweet-container').append($tweet);
+      $('.tweet-container').prepend($tweet);
     });
   }
-  renderTweets(data);
+
+  const $form = $('#new-tweet-form');
+  $form.on('submit', function(event) {
+    event.preventDefault();
+
+    if ($form.children('textarea').val().length > 140) {
+      $('<div>').addClass("c_error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
+      setTimeout(() => {
+        $('.c_error').remove();
+      }, 4000);
+    } else {
+      $.post("/tweets/", $form.serialize())
+        .done((data) => {
+          $('.tweet-container').empty();
+          loadTweets();
+        });
+    }
+  });
+
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: 'GET' })
+      .then(function(data) {
+        renderTweets(data);
+      });
+  }
+
+  const $button = $('#new-tweet-form input');
+  $button.on('mousedown', (event) => {
+    $button.css("background-color", "red");
+  });
+  $button.on('mouseup', (event) => {
+    $button.css("background-color", "#4353A0");
+  });
+
+  const $newTweetToggler = $('#newTweetButton');
+  $newTweetToggler.click(function(event) {
+    $('.new-tweet').slideToggle(400);
+  });
+
+  $('.go-to-top').click(function(event) {
+    $(window).scrollTop($('.main-header').offset().top);
+  });
+
+  window.addEventListener('scroll', () => {
+    if ($(window).scrollTop() > (400)) {
+      $('.go-to-top').css("display", "block");
+    } else {
+      $('.go-to-top').css("display", "none");
+    }
+  })
+
+  loadTweets();
 });
