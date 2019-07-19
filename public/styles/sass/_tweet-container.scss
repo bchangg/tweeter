@@ -68,7 +68,11 @@
       > .actions-on-tweet {
         display: flex;
         align-items: middle;
+
         > img {
+          &:hover {
+            margin-top: -3px;
+          }
           width: 2rem;
         }
       }

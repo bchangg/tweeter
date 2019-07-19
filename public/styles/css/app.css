@@ -166,6 +166,8 @@ body {
             align-items: middle; }
             body > div.user-and-content-wrapper > main > .tweet-container > article > footer > .actions-on-tweet > img {
               width: 2rem; }
+              body > div.user-and-content-wrapper > main > .tweet-container > article > footer > .actions-on-tweet > img:hover {
+                margin-top: -3px; }
   body .error {
     font-family: "Source Sans Pro", "sans-serif";
     text-align: left;
