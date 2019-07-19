@@ -44,21 +44,19 @@ $(document).ready(function() {
   const $form = $('#new-tweet-form');
   $form.on('submit', function(event) {
     event.preventDefault();
+    const renderErrorMessage = function(errorMessage) {
+      if (!$('.error').length) {
+        $('<div>').addClass("error").text(errorMessage).insertBefore($('.new-tweet'));
+        setTimeout(() => {
+          $('.error').remove();
+        }, 4000);
+      }
+    }
 
     if ($form.children('textarea').val().length > 140) {
-      if (!$('.error').length) {
-        $('<div>').addClass("error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
-        setTimeout(() => {
-          $('.error').remove();
-        }, 4000);
-      }
+      renderErrorMessage("Tweet must be less than 140 characters!");
     } else if ($form.children('textarea').val().length === 0) {
-      if (!$('.error').length) {
-        $('<div>').addClass("error").text("Please type something! Thank you :)").insertBefore($('.new-tweet'));
-        setTimeout(() => {
-          $('.error').remove();
-        }, 4000);
-      }
+      renderErrorMessage("Tweet must be longer than 0 characters!");
     } else {
       $.post("/tweets/", $form.serialize())
         .done((data) => {
