@@ -1,0 +1,29 @@
+> nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 1.5em;
+  height: 120px;
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Bungee', 'sans-serif';
+  color: #FFFFFF;
+  z-index: 2;
+  @media all and (min-width: 1024px) {
+    background-color: #4056A1;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', 'sans-serif';
+    font-weight: 400;
+    text-align: center;
+
+    &:hover {
+      margin-top: -0.5rem;
+      color: black;
+    }
+  }
+}

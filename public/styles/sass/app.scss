@@ -1,0 +1,43 @@
+// @import 'header';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  @import 'nav';
+
+  > div.user-and-content-wrapper {
+    @media all and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+    }
+    @import 'header';
+    @import 'main';
+  }
+
+  .error {
+    font-family: "Source Sans Pro", "sans-serif";
+    text-align: left;
+    color: red;
+    border: 1px solid red;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 70%;
+    background-color: rgba(254, 9, 0, 0.2);
+    box-shadow: 1px 1px 3px black;
+    border-radius: 3px;
+  }
+}

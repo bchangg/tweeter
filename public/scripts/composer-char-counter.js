@@ -4,10 +4,10 @@ $(document).ready(function() {
   
   $textArea.on("keyup", function(event) {
     if ($(this).val().length > maxChars) {
-      $(this).parent().parent().children('span').css("color", "red");
+      $(this).parent().children('span').css("color", "red");
     } else {
-      $(this).parent().parent().children('span').css("color", "inherit");
+      $(this).parent().children('span').css("color", "inherit");
     }
-    $(this).parent().parent().children('span').text(maxChars - $(this).val().length);
+    $(this).parent().children('span').text(maxChars - $(this).val().length);
   });
 });

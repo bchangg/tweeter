@@ -1,0 +1,39 @@
+> .new-tweet {
+  font-family: 'Bungee', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  > h2 {
+    font-family: 'Source Sans Pro', 'sans-serif';
+  }
+
+  > form {
+    &:visible .go-to-top {
+      display: block;
+    }
+    width: 80vw;
+    @media all and (min-width: 1024px) {
+      width: 40vw;
+    }
+
+    > textarea {
+      font-family: 'Source Sans Pro', 'sans-serif';
+      font-weight: 700;
+      border-width: 0 0 3px 0;
+      background-color: transparent;
+      width: 100%;
+    }
+
+    > input {
+      color: white;
+      background-color: #4353A0;
+      border: none;
+    }
+
+    > span {
+      float: right;
+    }
+  }
+}

@@ -13,11 +13,12 @@
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/css/app.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="/styles/layout.css" type="text/css" /> -->
+  <!-- <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" /> -->
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -34,30 +35,29 @@
     <span>tweeter</span>
     <div id="newTweetButton">
       <span><strong>Write</strong> a new tweet</span>
-      <br>
       <span>&#8964;</span>
     </div>
   </nav>
-  <header class="main-header">
-    <img src="/images/profile-hex.png">
-    <br>
-    <h2>These aren't the <span>droids</span> you're looking for</h2>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <img class="go-to-top" src="https://image.flaticon.com/icons/png/512/20/20427.png" alt="">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form id="new-tweet-form">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-      </form>
-      <span>140</span>
-    </section>
-    <section class="tweet-container">
-    </section>
-  </main>
-
+  <div class="user-and-content-wrapper">
+    <header class="main-header">
+      <img src="/images/profile-hex.png">
+      <h2>These aren't the <span>droids</span> you're looking for</h2>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <img class="go-to-top" src="https://image.flaticon.com/icons/png/512/20/20427.png" alt="">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form id="new-tweet-form">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span>140</span>
+        </form>
+      </section>
+      <section class="tweet-container">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

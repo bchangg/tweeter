@@ -44,9 +44,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     if ($form.children('textarea').val().length > 140) {
-      $('<div>').addClass("c_error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
+      $('<div>').addClass("error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
       setTimeout(() => {
-        $('.c_error').remove();
+        $('.error').remove();
       }, 4000);
     } else {
       $.post("/tweets/", $form.serialize())
@@ -78,7 +78,10 @@ $(document).ready(function() {
   });
 
   $('.go-to-top').click(function(event) {
-    $(window).scrollTop($('.main-header').offset().top);
+    $(window).scrollTop($('.main-header').offset());
+    if ($('.new-tweet').css('display') === 'none') {
+      $('.new-tweet').slideToggle(400);
+    }
   });
 
   window.addEventListener('scroll', () => {

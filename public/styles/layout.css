@@ -19,10 +19,11 @@ body {
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', 'sans-serif';
   font-size: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  position: relative;
   text-align: center;
   top: 520px;
   width: 90%;
@@ -42,7 +43,7 @@ main {
   border-radius: 3px;
 }
 
-.go-to-top {
+.go-to-top { 
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
