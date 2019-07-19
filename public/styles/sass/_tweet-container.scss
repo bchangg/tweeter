@@ -64,6 +64,14 @@
       border-width: 2px 0 0 0;
       display: flex;
       justify-content: space-between;
+
+      > .actions-on-tweet {
+        display: flex;
+        align-items: middle;
+        > img {
+          width: 2rem;
+        }
+      }
     }
   }
 }

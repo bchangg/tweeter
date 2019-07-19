@@ -25,7 +25,9 @@ $(document).ready(function() {
     ${moment(tweet.created_at).fromNow()}
     </div>
     <div class="actions-on-tweet">
-    some buttons
+    <img src="../images/like.png">
+    <img src="../images/comment.png">
+    <img src="../images/share.png">
     </div>
     </footer></article>`;
 

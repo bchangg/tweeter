@@ -161,6 +161,11 @@ body {
           border-width: 2px 0 0 0;
           display: flex;
           justify-content: space-between; }
+          body > div.user-and-content-wrapper > main > .tweet-container > article > footer > .actions-on-tweet {
+            display: flex;
+            align-items: middle; }
+            body > div.user-and-content-wrapper > main > .tweet-container > article > footer > .actions-on-tweet > img {
+              width: 2rem; }
   body .error {
     font-family: "Source Sans Pro", "sans-serif";
     text-align: left;
