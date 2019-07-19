@@ -51,6 +51,8 @@ $(document).ready(function() {
     } else {
       $.post("/tweets/", $form.serialize())
         .done((data) => {
+          $form.children('textarea').val('');
+          $form.children('span').text('140');
           $('.tweet-container').empty();
           loadTweets();
         });
