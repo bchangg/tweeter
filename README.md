@@ -16,3 +16,10 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 - Ruby-sass
+
+## SCREENSHOTS
+["Screenshot of desktop before tweet"](https://github.com/bchangg/tweeter/blob/master/docs/desktop-before-tweet.png?raw=true)
+["Screenshot of desktop after tweet"](https://github.com/bchangg/tweeter/blob/master/docs/desktop-after-tweet.png?raw=true)
+["Screenshot of mobile before tweet"](https://github.com/bchangg/tweeter/blob/master/docs/mobile-before-tweet.png?raw=true)
+["Screenshot of mobile after tweet"](https://github.com/bchangg/tweeter/blob/master/docs/mobile-after-tweet.png?raw=true)
+
