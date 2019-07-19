@@ -4,7 +4,7 @@ $(document).ready(function() {
     $div.append(document.createTextNode(someText));
     return $div.innerHTML;
   }
-
+  
   const createTweetElement = function(tweet) {
     let tweetArticle = `
     <article><header>
