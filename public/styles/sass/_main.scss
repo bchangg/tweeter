@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media all and (min-width: 1024px) {
+    width: 60vw;
+  }
 
   > .go-to-top {
     position: fixed;
@@ -12,9 +15,6 @@
     display: none;
     background-color: white;
     border-radius: 10rem;
-  }
-  @media all and (min-width: 1024px) {
-    width: 60vw;
   }
   @import 'new-tweet';
   @import 'tweet-container';

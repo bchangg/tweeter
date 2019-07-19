@@ -23,6 +23,7 @@ body {
     @media all and (min-width: 1024px) {
       display: flex;
       flex-direction: row;
+      justify-content: space-evenly;
     }
     @import 'header';
     @import 'main';

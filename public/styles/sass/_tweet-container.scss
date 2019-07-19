@@ -1,5 +1,6 @@
 > .tweet-container {
   margin-top: 3rem;
+  justify-content: space-between;
   width: 80vw;
   word-wrap: break-word;
   @media all and (min-width: 1024px) {
@@ -16,10 +17,12 @@
     font-size: 1.1rem;
 
     &:hover {
-      box-shadow: 10px 10px 5px;
+      box-shadow: 5px 5px 5px;
 
       .tweeter-handle {
         display: inline;
+        color: #6c24e2;
+        font-weight: 700;
       }
     }
 
@@ -30,7 +33,7 @@
 
       > .tweeter-name {
         display: flex;
-        align-self: flex-start;
+        // align-self: flex-start;
         align-items: center;
 
         > img {
@@ -38,6 +41,8 @@
         }
 
         > span {
+          font-family: 'Bungee', 'sans-serif';
+          font-size: 0.9em;
           margin-left: 0.7rem;
         }
       }
@@ -51,6 +56,7 @@
     > div {
       margin: 2rem auto;
       font-weight: 700;
+      font-size: 1.3em;
     }
 
     > footer {

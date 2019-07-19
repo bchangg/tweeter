@@ -36,11 +36,14 @@ body {
       text-align: center; }
       body > nav div:hover {
         margin-top: -0.5rem;
-        color: black; }
+        margin-right: -0.7rem;
+        color: #f1a440;
+        font-size: 1.7rem; }
   @media all and (min-width: 1024px) {
     body > div.user-and-content-wrapper {
       display: flex;
-      flex-direction: row; } }
+      flex-direction: row;
+      justify-content: space-evenly; } }
   body > div.user-and-content-wrapper > header {
     display: flex;
     flex-direction: column;
@@ -53,9 +56,9 @@ body {
     background-image: url("http://www.transparenttextures.com/patterns/3px-tile.png"); }
     @media all and (min-width: 1024px) {
       body > div.user-and-content-wrapper > header {
-        padding-top: 0px;
-        margin: 2rem 1rem;
-        width: 33.3vw; } }
+        padding-top: 0;
+        margin-top: 7vh;
+        max-width: 27vw; } }
     body > div.user-and-content-wrapper > header > img {
       width: 10rem;
       height: 10rem; }
@@ -72,6 +75,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media all and (min-width: 1024px) {
+      body > div.user-and-content-wrapper > main {
+        width: 60vw; } }
     body > div.user-and-content-wrapper > main > .go-to-top {
       position: fixed;
       bottom: 1.5rem;
@@ -81,9 +87,6 @@ body {
       display: none;
       background-color: white;
       border-radius: 10rem; }
-    @media all and (min-width: 1024px) {
-      body > div.user-and-content-wrapper > main {
-        width: 60vw; } }
     body > div.user-and-content-wrapper > main > .new-tweet {
       font-family: 'Bungee', 'sans-serif';
       display: flex;
@@ -113,6 +116,7 @@ body {
           float: right; }
     body > div.user-and-content-wrapper > main > .tweet-container {
       margin-top: 3rem;
+      justify-content: space-between;
       width: 80vw;
       word-wrap: break-word; }
       @media all and (min-width: 1024px) {
@@ -127,27 +131,31 @@ body {
         font-weight: 300;
         font-size: 1.1rem; }
         body > div.user-and-content-wrapper > main > .tweet-container > article:hover {
-          box-shadow: 10px 10px 5px; }
+          box-shadow: 5px 5px 5px; }
           body > div.user-and-content-wrapper > main > .tweet-container > article:hover .tweeter-handle {
-            display: inline; }
+            display: inline;
+            color: #6c24e2;
+            font-weight: 700; }
         body > div.user-and-content-wrapper > main > .tweet-container > article > header {
           display: flex;
           align-items: center;
           justify-content: space-between; }
           body > div.user-and-content-wrapper > main > .tweet-container > article > header > .tweeter-name {
             display: flex;
-            align-self: flex-start;
             align-items: center; }
             body > div.user-and-content-wrapper > main > .tweet-container > article > header > .tweeter-name > img {
               width: 40px; }
             body > div.user-and-content-wrapper > main > .tweet-container > article > header > .tweeter-name > span {
+              font-family: 'Bungee', 'sans-serif';
+              font-size: 0.9em;
               margin-left: 0.7rem; }
           body > div.user-and-content-wrapper > main > .tweet-container > article > header > .tweeter-handle {
             display: none;
             color: #CAD0E3; }
         body > div.user-and-content-wrapper > main > .tweet-container > article > div {
           margin: 2rem auto;
-          font-weight: 700; }
+          font-weight: 700;
+          font-size: 1.3em; }
         body > div.user-and-content-wrapper > main > .tweet-container > article > footer {
           border: solid;
           border-width: 2px 0 0 0;
