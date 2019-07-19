@@ -4,7 +4,7 @@ $(document).ready(function() {
     $div.append(document.createTextNode(someText));
     return $div.innerHTML;
   }
-  
+
   const createTweetElement = function(tweet) {
     let tweetArticle = `
     <article><header>
@@ -52,6 +52,13 @@ $(document).ready(function() {
           $('.error').remove();
         }, 4000);
       }
+    } else if ($form.children('textarea').val().length === 0) {
+      if (!$('.error').length) {
+        $('<div>').addClass("error").text("Please type something! Thank you :)").insertBefore($('.new-tweet'));
+        setTimeout(() => {
+          $('.error').remove();
+        }, 4000);
+      }
     } else {
       $.post("/tweets/", $form.serialize())
         .done((data) => {
@@ -91,7 +98,7 @@ $(document).ready(function() {
   });
 
   window.addEventListener('scroll', () => {
-    if ($(window).scrollTop() > (400)) {
+    if ($(window).scrollTop() > 400) {
       $('.go-to-top').css("display", "block");
     } else {
       $('.go-to-top').css("display", "none");
