@@ -17,7 +17,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 - Ruby-sass
 
-## SCREENSHOTS
+## Screenshots
 !["Screenshot of desktop before tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/desktop-before-tweet.png)
 !["Screenshot of desktop after tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/desktop-after-tweet.png)
 !["Screenshot of mobile before tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/mobile-before-tweet.png)
