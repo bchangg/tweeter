@@ -18,8 +18,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Ruby-sass
 
 ## SCREENSHOTS
-["Screenshot of desktop before tweet"](https://github.com/bchangg/tweeter/blob/master/docs/desktop-before-tweet.png?raw=true)
-["Screenshot of desktop after tweet"](https://github.com/bchangg/tweeter/blob/master/docs/desktop-after-tweet.png?raw=true)
-["Screenshot of mobile before tweet"](https://github.com/bchangg/tweeter/blob/master/docs/mobile-before-tweet.png?raw=true)
-["Screenshot of mobile after tweet"](https://github.com/bchangg/tweeter/blob/master/docs/mobile-after-tweet.png?raw=true)
+["Screenshot of desktop before tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/desktop-before-tweet.png)
+["Screenshot of desktop after tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/desktop-after-tweet.png)
+["Screenshot of mobile before tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/mobile-before-tweet.png)
+["Screenshot of mobile after tweet"](https://raw.githubusercontent.com/bchangg/tweeter/master/docs/mobile-after-tweet.png)
 
