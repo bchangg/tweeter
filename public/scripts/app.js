@@ -4,7 +4,7 @@ $(document).ready(function() {
     $div.append(document.createTextNode(someText));
     return $div.innerHTML;
   }
-
+  
   const createTweetElement = function(tweet) {
     let tweetArticle = `
     <article><header>
@@ -22,7 +22,7 @@ $(document).ready(function() {
     </div>
     <footer>
     <div class="time-tweeted">
-    ${tweet.created_at}
+    ${moment(tweet.created_at).fromNow()}
     </div>
     <div class="actions-on-tweet">
     some buttons
