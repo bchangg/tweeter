@@ -4,7 +4,7 @@ $(document).ready(function() {
     $div.append(document.createTextNode(someText));
     return $div.innerHTML;
   }
-  
+
   const createTweetElement = function(tweet) {
     let tweetArticle = `
     <article><header>
@@ -44,10 +44,12 @@ $(document).ready(function() {
     event.preventDefault();
 
     if ($form.children('textarea').val().length > 140) {
-      $('<div>').addClass("error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
-      setTimeout(() => {
-        $('.error').remove();
-      }, 4000);
+      if (!$('.error').length) {
+        $('<div>').addClass("error").text("Please limit your input to 140 characters! Thank you :)").insertBefore($('.new-tweet'));
+        setTimeout(() => {
+          $('.error').remove();
+        }, 4000);
+      }
     } else {
       $.post("/tweets/", $form.serialize())
         .done((data) => {
