@@ -1,6 +1,7 @@
 > nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   padding: 1.5em;
@@ -17,6 +18,7 @@
   div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'Source Sans Pro', 'sans-serif';
     font-weight: 400;
     text-align: center;
@@ -26,6 +28,9 @@
       margin-right: -0.7rem;
       color: #f1a440;
       font-size: 1.7rem;
+    }
+    svg {
+      width: 0.5rem;
     }
   }
 }

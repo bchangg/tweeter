@@ -83,20 +83,27 @@ $(document).ready(function() {
     $button.css("background-color", "#4353A0");
   });
 
+  const focusTextArea = function(delay) {
+    setTimeout(() => {
+      $('.new-tweet').children('form').children('textarea').focus();
+    }, delay);
+  }
+
   const $newTweetToggler = $('#newTweetButton');
   $newTweetToggler.click(function(event) {
     $('.new-tweet').slideToggle(400);
     if ($('.new-tweet').is(":visible")) {
-      setTimeout(() => {
-        $('.new-tweet').children('form').children('textarea').focus();
-      }, 400);
+      focusTextArea(400);
     }
   });
 
   $('.go-to-top').click(function(event) {
     $(window).scrollTop($('.main-header').offset());
-    if ($('.new-tweet').css('display') === 'none') {
+    if (!$('.new-tweet').is(":visible")) {
       $('.new-tweet').slideToggle(400);
+      focusTextArea(400);
+    } else {
+      focusTextArea(0);
     }
   });
 
