@@ -85,11 +85,11 @@ $(document).ready(function() {
 
   const $newTweetToggler = $('#newTweetButton');
   $newTweetToggler.click(function(event) {
-    if (!$('.new-tweet').is(":visible")) {
-      $('.new-tweet').slideToggle(400);
-      $('.new-tweet').children('form').children('textarea').focus();
-    } else {
-      $('.new-tweet').slideToggle(400);
+    $('.new-tweet').slideToggle(400);
+    if ($('.new-tweet').is(":visible")) {
+      setTimeout(() => {
+        $('.new-tweet').children('form').children('textarea').focus();
+      }, 400);
     }
   });
 
