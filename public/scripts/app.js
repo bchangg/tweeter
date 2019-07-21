@@ -85,7 +85,12 @@ $(document).ready(function() {
 
   const $newTweetToggler = $('#newTweetButton');
   $newTweetToggler.click(function(event) {
-    $('.new-tweet').slideToggle(400);
+    if (!$('.new-tweet').is(":visible")) {
+      $('.new-tweet').slideToggle(400);
+      $('.new-tweet').children('form').children('textarea').focus();
+    } else {
+      $('.new-tweet').slideToggle(400);
+    }
   });
 
   $('.go-to-top').click(function(event) {
