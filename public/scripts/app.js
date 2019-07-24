@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $('.new-tweet').css("display", "none");
+
   const safeText = function(someText) {
     let $div = $("<div/>");
     $div.append(document.createTextNode(someText));
